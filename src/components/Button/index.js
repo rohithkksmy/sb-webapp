@@ -14,7 +14,6 @@ export default class Button extends PureComponent {
   render() {
     const { className, label, variation, onClick, ...others } = this.props;
     const buttonClass = classNames(styles.common, className, { [styles[variation]]: styles[variation] });
-
     return <button className={buttonClass} onClick={onClick} {...others} >{label}</button>;
   }
 }

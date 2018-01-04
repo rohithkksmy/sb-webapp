@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { func } from 'prop-types';
 import styles from './styles.scss';
 import Text from '../../components/Text';
+import Template from '../../components/Templates';
 import * as profileActions from '../../redux/modules/profile';
 
 @connect(state => ({ gotProfile: state.profile.gotData }),
@@ -26,6 +27,9 @@ export default class Home extends PureComponent {
     return (
       <div className={styles.home} >
         <Text className={styles.text} value="HelloWorld" />
+        <div>
+          <Template></Template>
+        </div>
       </div>
     );
   }
