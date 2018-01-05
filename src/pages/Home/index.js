@@ -6,11 +6,14 @@ import styles from './styles.scss';
 import Text from '../../components/Text';
 import Template from '../../components/Templates';
 import * as profileActions from '../../redux/modules/profile';
+import Label from '../../components/Label';
+import Checkbox from '../../components/Checkbox';
 
 @connect(state => ({ gotProfile: state.profile.gotData }),
 {
   getProfileData: profileActions.getProfileData,
   getRepos: profileActions.getRepos
+  
 })
 export default class Home extends PureComponent {
   static propTypes = {
@@ -30,6 +33,8 @@ export default class Home extends PureComponent {
         <div>
           <Template></Template>
         </div>
+        <Label label ="Name"></Label>
+        <Checkbox></Checkbox>
       </div>
     );
   }
