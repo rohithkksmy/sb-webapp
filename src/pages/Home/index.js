@@ -8,11 +8,14 @@ import Header from '../../components/Header';
 import TextIn from '../../components/TextIn';
 import Template from '../../components/Templates';
 import * as profileActions from '../../redux/modules/profile';
+import Label from '../../components/Label';
+import Checkbox from '../../components/Checkbox';
 
 @connect(state => ({ gotProfile: state.profile.gotData }),
 {
   getProfileData: profileActions.getProfileData,
   getRepos: profileActions.getRepos
+  
 })
 export default class Home extends PureComponent {
   static propTypes = {
@@ -35,6 +38,8 @@ export default class Home extends PureComponent {
           <TextIn inputType = "text"></TextIn>
           <TextIn inputType = "password"></TextIn>
         </div>
+        <Label label ="Name"></Label>
+        <Checkbox></Checkbox>
       </div>
     );
   }
